@@ -1,6 +1,5 @@
-import { API_KEY } from '$lib/stores/state'
 import { type CIDString, type Web3File, type Web3Response, Web3Storage } from 'web3.storage'
-
+import { API_KEY } from '$lib/stores/state'
 
 export function getAccessToken () {
     // If you're just testing, you can paste in a token
@@ -27,7 +26,7 @@ export function makeFileObjects (obj) {
     const blob = new Blob([JSON.stringify(obj)], { type: 'application/json' })
   
     const files = [
-      new File([blob], 'test2.json')
+      new File([blob], 'test.json')
     ]
     return files
   }
@@ -68,7 +67,7 @@ export async function getData(cid:CIDString) {
     const token = await getAccessToken()
     const client = getClientInstance(cid)
     //todo
-    const api = `https://${cid}.ipfs.dweb.link/test.json`
+    const api = `https://${cid}.ipfs.dweb.link/test2.json`
     console.log(api)
     const res = await fetch(api)
     
@@ -86,7 +85,7 @@ export async function testIPFS() {
 
     const object = {
      test: 'hello',
-     number: 12345
+     number: 123456
     }
 
     const files = makeFileObjects(object)
@@ -97,4 +96,5 @@ export async function testIPFS() {
     const retrieve = await retrieveFiles(cid)
     const data = await getData(cid)
  }
+
 

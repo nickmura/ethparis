@@ -12,6 +12,7 @@
 
 
 	import IPFS from '$lib/components/IPFS.svelte'
+	import IPNS from '$lib/components/IPNS.svelte'
 </script>
 
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
@@ -41,6 +42,7 @@
 		>
 
 		<IPFS/>
+		<IPNS/>
 	</section>
 	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
 		<h1 class="text-2xl text-black font-bold">Sync contract state on block, event or interval</h1>
