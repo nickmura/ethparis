@@ -80,7 +80,7 @@ export async function getData(cid:CIDString) {
 export async function testIPFS() {
     const token = getAccessToken()
     console.log('Received access token, now awaiting client instance')
-    const client = await getClientInstance(token)
+    const client = getClientInstance(token)
     console.log('Received client instance, now storing files')
 
     const object = {

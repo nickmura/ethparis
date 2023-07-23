@@ -11,8 +11,11 @@
 	import { formatEther } from 'ethers/lib/utils';
 
 
-	import IPFS from '$lib/components/IPFS.svelte'
-	import IPNS from '$lib/components/IPNS.svelte'
+	import IPFS from '$lib/components/test/IPFS.svelte'
+	import IPNS from '$lib/components/test/IPNS.svelte'
+	import DeployData from '$lib/components/DeployData.svelte';
+
+
 </script>
 
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
@@ -41,8 +44,8 @@
 			>Disconnect</button
 		>
 
-		<IPFS/>
-		<IPNS/>
+		<DeployData/>
+		
 	</section>
 	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
 		<h1 class="text-2xl text-black font-bold">Sync contract state on block, event or interval</h1>

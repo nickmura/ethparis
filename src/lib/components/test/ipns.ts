@@ -37,7 +37,11 @@ export async function currentNameValue() {
     bafybeia3j4e4ucm6xnur3yiwyixscmn3jyh6m7hlavl7a227kca2exiqzu
     `
     const name = Name.parse(nameID)
-    ''
+    
     const revision = await Name.resolve(name);
     console.log(`Resolved value:`, revision.value);
+}
+
+export async function deployData(obj) {
+    
 }
