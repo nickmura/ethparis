@@ -19,7 +19,8 @@
 </script>
 
 <main class="flex flex-col p-10 w-screen h-screen items-center gap-5 font-serif">
-	<h1 class="text-5xl text-black font-bold">Svelte Ethers Template</h1>
+	<h1 class="text-5xl text-black font-bold">MetaDeployer demonstration
+	</h1>
 
 	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
 		<h1 class="text-2xl text-black font-bold">Wallet and Provider</h1>
@@ -47,14 +48,5 @@
 		<DeployData/>
 		
 	</section>
-	<section class="flex flex-col p-10 items-start gap-5 border-2 rounded-xl">
-		<h1 class="text-2xl text-black font-bold">Sync contract state on block, event or interval</h1>
-		<p class="text-md text-black font-semibold">
-			Set In '$lib/globalState.ts', will load as long as a store is used from '$lib/stores/state.ts'
-			or you import the globalState in the root of your project with 'import "$lib/globalState";'
-		</p>
-		<h2 class="text-xl text-black font-semibold">
-			$balanceOnBlock: {formatEther($balanceOnBlock)} ETH
-		</h2>
-	</section>
+
 </main>
