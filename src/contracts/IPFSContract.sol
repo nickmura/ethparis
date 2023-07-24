@@ -6,8 +6,19 @@ contract DeployData {
 
     mapping(uint256=>string)data;
 
-    function storeData(string memory _name, uint256 identifier) public {
-        data[identifier] = _name;
+
+    constructor(string memory name, uint256 num) {
+        storeData(name, num);
+    }
+
+
+    function storeData(string memory _name, uint256 _identifier) public {
+        if (bytes(data[_identifier]).length != 0) {
+            revert InvalidIdentifier({
+            identifier:_identifier
+            });
+        }
+        data[_identifier] = _name;
     }
 
     function readData(uint256 _identifier) public view returns (string memory) {
@@ -20,4 +31,3 @@ contract DeployData {
         }
     }
 }
-
